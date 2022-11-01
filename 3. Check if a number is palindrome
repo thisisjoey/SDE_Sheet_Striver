@@ -1,0 +1,28 @@
+/* Leetcode question: https://leetcode.com/problems/palindrome-number/
+*/
+
+//Other Possible non efficient ways to do the question
+ //Convert to string and reverse it and compare.
+    //Convert to a string and start 2 pointers from back and front and check if both have same character or not.
+    //Reverse the integer and check if the new integer is same as old
+
+
+class Solution {
+public:
+   
+    bool isPalindrome(int x) {
+        if(x<0)
+            return false;
+        long conv=0;
+        int comp=x;
+        while(x>0)
+        {
+            int temp=x%10;
+            conv=(conv*10)+temp;
+            x/=10;
+        }
+        if(conv==comp)
+            return true;
+        return false;
+    }
+};
