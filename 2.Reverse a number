@@ -1,0 +1,21 @@
+/* Leetcode question : https://leetcode.com/problems/reverse-integer/
+*/
+
+class Solution {
+public:
+    int reverse(int x) {
+        long conv=0;
+        while(1)
+        {
+            if(x==0)
+                break;
+            int temp=x%10;
+            conv=(conv*10)+temp;
+            x/=10;
+        }
+        if(conv>INT_MAX || conv<INT_MIN)
+            return 0;
+        return conv;
+        
+    }
+};
