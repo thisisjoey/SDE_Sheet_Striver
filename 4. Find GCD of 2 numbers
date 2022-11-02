@@ -1,0 +1,18 @@
+//This is Euclidean's theorm using recursion
+
+#include <bits/stdc++.h>
+using namespace std;
+//Euclidean's Theorm using recursion
+int rec(int a,int b)
+{
+    if(b==0)
+        return a;
+    return rec(b,a%b);
+}
+int main()
+{
+    int a,b;
+    cin>>a>>b;
+    cout<<rec(a,b);
+    return 0;
+}
