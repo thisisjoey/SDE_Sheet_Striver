@@ -1,0 +1,30 @@
+ //Check if a number is armstrong or not
+    //If a number is armstrong then sum of (individual digit to the power of no. of digit is equal to that number itself)
+
+
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a;
+    cin>>a;
+    int b=0;
+    int temp=a;
+    int power=0,x=10;
+    while(a>0)
+    {
+        a/=10;
+        power++;
+    }
+    a=temp;
+    while(a>0)
+    {
+        b+=pow((a%10),power);
+        a/=10;
+    }
+    if(b==temp)
+        cout<<"True";
+    else
+        cout<<"False "<<b;
+    return 0;
+}
